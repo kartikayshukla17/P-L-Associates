@@ -289,14 +289,19 @@ body {
     border-radius: 12px;
     overflow: hidden;
     background: linear-gradient(135deg, rgba(36, 124, 119, 0.05) 0%, rgba(36, 124, 119, 0.1) 100%);
-    padding: 8px;
+    padding: clamp(6px, 1.5vw, 12px);
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(36, 124, 119, 0.15);
+    width: clamp(140px, 25vw, 280px);
+    max-width: 100%;
 }
 
 .justice-statue img {
-    width: 250px;
-    height: 320px;
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    min-width: 120px;
+    aspect-ratio: 250/320;
     object-fit: contain;
     object-position: center;
     display: block;
@@ -755,8 +760,6 @@ body {
     }
     
     .justice-statue {
-        width: 200px;
-        height: 260px;
         margin: 0 auto;
     }
     
@@ -890,8 +893,7 @@ body {
     }
     
     .justice-statue {
-        width: 160px;
-        height: 200px;
+        width: clamp(120px, 20vw, 180px);
     }
     
     .section-title {
@@ -966,8 +968,7 @@ body {
     }
     
     .justice-statue {
-        width: 140px;
-        height: 180px;
+        width: clamp(100px, 18vw, 160px);
     }
     
     .cta-button {
